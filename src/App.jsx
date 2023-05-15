@@ -1,9 +1,11 @@
 import { BrowserRouter } from "react-router-dom";
 
 import { About, Contact, Education, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   return (
+    <>
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
@@ -19,7 +21,9 @@ const App = () => {
           <StarsCanvas />
         </div>
       </div>
-    </BrowserRouter>
+    </BrowserRouter>    
+    <Analytics />
+    </>
   );
 }
 
